@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metotlar
 {
-    class SepetManager
+    public class SepetManager
     {
         
 

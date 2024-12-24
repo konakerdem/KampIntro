@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metotlar
 {
-    class Urun
+   public class Urun
     {
 
         //Property - Özellik
