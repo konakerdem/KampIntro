@@ -52,7 +52,10 @@ namespace OOP1
             
         }
 
-
+        //public void BiseyYap(int sayi)
+        //{
+        //    sayi = 99;
+        //} 
 
 
 

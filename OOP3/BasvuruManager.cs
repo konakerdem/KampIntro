@@ -6,49 +6,34 @@ using System.Threading.Tasks;
 
 namespace OOP3
 {
-    internal class BasvuruManager
+    class BasvuruManager
     {
-        //Herkesin referansını tutabilen IKredi manager alırım.İstek ne gelirse o obje çalışır 
+        //Method Injection
+        public void BasvuruYap(IKrediManager krediManager, List<ILoggerService> loggerServices)
+        //IkrediM tümmm referansları tutabiliyoooooo o yüzden referans olarak onu yazcammm
+        //Birden fazla loglama  seçenğiolaiblir
 
-        /*public void BasvuruYap(IKrediManager krediManager , ILoggerService loggerService)
         {
-                //Başvuran bilgilerini değerlendirme
-                //
-                krediManager.Hesapla();
-                loggerService.Log();//hangi parametreyle longlandıysa onu seç
+            // Başvuran bilgilerini değerlendirme
 
-        }
-        */
-
-        //birden fazla loglama türü olabilir
-
-        public void BasvuruYap(IKrediManager krediManager,List<ILoggerService> loggerService)
-        {
-            //başvuran bilgilerini değerlendirme
             krediManager.Hesapla();
-            foreach (var logger in loggerService)
+
+            foreach (var loggerService in loggerServices)
             {
-               
-                logger.Log();   
-                
+                loggerService.Log();
+
             }
 
         }
 
 
-
-        //birden fazla şey hakkında bilgi talep edebiliriz
-        public void KrediOnBilgilendirmesiYap(List<IKrediManager>krediler)
+        public void KrediOnBilgilendirmesiYap(List<IKrediManager> krediler) //Birden fazla kredi hakkında talep gelebilir. Liste kullanırız
         {
-            //üsttekiyle aynı sadece artık birden fazla aldığımız için dizi döngüsü yapıyoruz IKrediManager nesnelerimize
             foreach (var kredi in krediler)
             {
-                kredi.Hesapla();  
+                kredi.Hesapla();
             }
-
-
         }
-
 
 
 

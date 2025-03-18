@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP3
 {
-    internal class TasitKrediManager : IKrediManager
+    class TasitKrediManager : IKrediManager //ımplement ınterface de tüm methodları getirsin
     {
         public void BiseyYap()
         {
@@ -15,10 +15,9 @@ namespace OOP3
 
         public void Hesapla()
         {
-            //
-            //
+            // ....
 
-            Console.WriteLine("Taşıt kredisi ödeme planı hesaplandı");
+            Console.WriteLine("Taşıt Kredisi Ödeme Planı Hesaplandı");
         }
     }
 }

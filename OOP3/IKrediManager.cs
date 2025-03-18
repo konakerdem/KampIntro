@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace OOP3
 {
-
-    //içerisi farklı ama hesaplama işlemi yapacak yapılarda ana classı interface olarak tanımlıyoruz
-    // Kalıtım yapacağın classlar aşağıda yer alan Fonksiyonları içermek ZORUNDA
-    interface  IKrediManager //INTERFACE olduğu anlaşılsın diye I harfiyle başlatırız.
+    interface IKrediManager
     {
 
+        //Hepsi hesaplama yapacak ama içeriği farklı bu tür durumlarda class DEĞİL INTERFACE olur artık o 
+        //Okunurluğu arttırmak için I harfi ile başlarlar
+        //Şablon görevi görüyor
+        //Biri bu interface i kullanırsa o bu methodları içermek zorunda , 
+        public void Hesapla();
+        public void BiseyYap();
 
-         void Hesapla();
-         void BiseyYap();
+
 
     }
 }

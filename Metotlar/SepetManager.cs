@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Metotlar
 {
+
     public class SepetManager
     {
-        
+        //fonksiyonlar
 
-        //naming convention
+        //naming convention fonksiyonlar büyük harfle başlar
 
         public void Ekle(Urun urun)
         

@@ -8,7 +8,7 @@ namespace Koleksiyonlar
         static void Main(string[] args)
         {
             //arraylerde eleman sayısı sabit kalıyor 
-            string[] isimler = new string[] {"Engin","Murat","Kerem","Halil"};
+            string[] isimler = new string[] { "Engin", "Murat", "Kerem", "Halil" };
 
             Console.WriteLine(isimler[0]); //Engin
             Console.WriteLine(isimler[1]); //Murat
@@ -34,19 +34,16 @@ namespace Koleksiyonlar
 
             */
 
-
-
-            List<string> isimler2 = new List<string> {"Engin","Murat","Kerem","Halil"};
+            List<string> isimler2 = new List<string> { "Engin", "MURAT", "Kerem", "Halil" };
             Console.WriteLine(isimler2[0]);
             Console.WriteLine(isimler2[1]);
             Console.WriteLine(isimler2[2]);
             Console.WriteLine(isimler2[3]);
-            
-            isimler2.Add("İlker");// en sona eklemiş olduk
 
-            Console.WriteLine(isimler2[0]); // eski elemana da erişebildim
-            Console.WriteLine(isimler2[4]); // ilker
-            
+            isimler2.Add("İlker");
+            Console.WriteLine(isimler2[4]); //ilker eklendi
+            Console.WriteLine(isimler2[0]); //önbekiler de kaybolmadı
+
 
 
         }

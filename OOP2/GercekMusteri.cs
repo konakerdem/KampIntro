@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace OOP2
 {
-
-    //Indivusual
-    //Miras Inheritance
-    internal class GercekMusteri:Musteri 
-   //gerçek müşteri de bir müşteridir
-   //Müşteride olan özellikler gerçek müşteride de vardır
+    //Individual
+    class GercekMusteri : Musteri //inheritance
+                                  //Müşteri de olan özellikler artık Gerçek Müşteride de vardır
     {
+
+       
         public string TcNo { get; set; }
         public string Adi { get; set; }
-        public string Soyadi { get; set; }
+        public string SoyAdi { get; set; }
 
     }
 }

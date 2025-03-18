@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP3
 {
-    internal class KonutKrediManager : IKrediManager
+    class KonutKrediManager : IKrediManager //ımplement ınterface de tüm methodları getirsin
     {
         public void BiseyYap()
         {
@@ -15,8 +15,7 @@ namespace OOP3
 
         public void Hesapla()
         {
-            Console.WriteLine("Konut kredisi ödeme planı hesaplandı");
-
+            Console.WriteLine("Konut Kredisi Ödeme Planı Hesaplandı");
         }
     }
 }

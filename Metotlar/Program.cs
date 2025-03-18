@@ -19,7 +19,7 @@ namespace Metotlar
             urun2.Aciklama = "Diyarbakır Karpuzu";
 
 
-            Urun[] urunler = new Urun[] { urun1, urun2, };
+            Urun[] urunler = new Urun[] { urun1, urun2};
 
             //type-safe tip güvenli
 

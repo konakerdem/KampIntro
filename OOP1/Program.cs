@@ -6,7 +6,7 @@ namespace OOP1
     {
         static void Main(string[] args)
         {
-           
+
             Product product1 = new Product();
             product1.Id = 1;
             product1.CategoryId = 2;
@@ -15,16 +15,25 @@ namespace OOP1
             product1.UnitsInStock = 3;
 
             //TEK SATIRDA TANIMLAMA
-            Product product2 = new Product { Id = 2, CategoryId = 5, ProductName = "Kalem", UnitsInStock = 5 ,UnitPrice=35};
-            
+            Product product2 = new Product { Id = 2, CategoryId = 5, ProductName = "Kalem", UnitsInStock = 5, UnitPrice = 35 };
+
             //PascalCase   //camelCase
             //case sensitive
 
             ProductManager productManager = new ProductManager();
 
+
             productManager.Add(product1);
             Console.WriteLine(product1.ProductName);
-           
+
+            //nesneler referans tiplidir fonksitonun içinde değişikliğe uğrattığımız zaman adreste işlem yapıldığı için değer değişir.
+
+            /*int sayi1 = 100;
+            productManager.BiseyYap(sayi1);   //int değer tipğli olduğu için biz sayi1 in sadece değerini aldık adresinde bir değişiklik yapamadık.
+            Console.WriteLine(sayi1); 
+            */
+
+
 
 
 
@@ -34,28 +43,6 @@ namespace OOP1
             //ref out 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /*
-          int sayi1 = 100;
-          productManager.BiseyYap(sayi1); //productManager.BiseyYap(100); demişim gibi çalışıyor yani
-          Console.WriteLine(sayi1); // sayi1 içerde değişti ama biz burda fonksdan gelen değere eşitleme yapmadık o yüzden sadece fonks içinde değişti.(ayrıca returnlemeliydik)
-          */
 
 
 

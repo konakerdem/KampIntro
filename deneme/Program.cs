@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP3
+namespace deneme
 {
-     class SmsLoggerService:ILoggerService
+    internal class Program
     {
-        public void Log()
+        static void Main(string[] args)
         {
-            Console.WriteLine("sms loglandı");
         }
-
     }
 }

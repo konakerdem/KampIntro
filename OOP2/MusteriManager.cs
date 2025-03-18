@@ -7,19 +7,17 @@ using System.Threading.Tasks;
 namespace OOP2
 {
     //İş Sınıfları //Business Classes
-
-    internal class MusteriManager
+    class MusteriManager
     {
-    
-    public void Ekle(Musteri musteri)
+        public void Ekle(Musteri musteri)  //Ben Musteri ile hem tüzel hemde gerçek müşteriyi göndermek istiyorum
         {
-           /* if (musteri.) { }
-           */
 
+            //if (musteri.)
+            //{
 
+            //}
 
 
         }
-    
     }
 }

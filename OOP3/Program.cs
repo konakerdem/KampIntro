@@ -3,48 +3,76 @@ using System.Collections.Generic;
 //program.cs
 namespace OOP3
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            //yine Musterideki gibi IKrediManager dan diğerlerini türetebiliyoruz.Polymorphism
-        
-            IKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
-            IKrediManager tasitKrediManager=new TasitKrediManager();
-            IKrediManager konutKrediManager=new KonutKrediManager();
+            /*
+            IhtiyacKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
+            ihtiyacKrediManager.Hesapla();
 
 
+            TasitKrediManager tasitKrediManager = new TasitKrediManager();
+            tasitKrediManager.Hesapla();
 
-            ILoggerService databaseLoggerService=new DatabaseLoggerService();
-            ILoggerService fileLoggerService=new FileLoggerService();   //BÖYLE DE GÖNDEREBİLİRİM  gönderirken de adresleyeiblirim aşağıda var 
+            KonutKrediManager konutKrediManager = new KonutKrediManager();
+            konutKrediManager.Hesapla();
+            */
 
-            
+
+            // -----------------DİKKATTT------  Interfaceden türetiyoruz ----------------------------
+
+
+            //Interfacelerde de  ımplemente eden classların referansını tutaibliyor.
+
+
+            //ben adreslerimi oluşturdum
+            IKrediManager ihtiyacKrediManager2 = new IhtiyacKrediManager();
+
+            IKrediManager tasitKrediManager2 = new TasitKrediManager();
+
+            IKrediManager konutKrediManager2 = new KonutKrediManager();
+
+
 
             BasvuruManager basvuruManager = new BasvuruManager();
-            /*tek loglama
-             
-            basvuruManager.BasvuruYap(tasitKrediManager, databaseLoggerService);
-            
-             */
-
-
-            //PARTAMETRE GÖNDERİRKEN DE ADRES OLUŞTURABİLİRİM
-            //birden fazla loglama seçme
-            List<ILoggerService> loggers = new List<ILoggerService> {new SmsLoggerService(),new FileLoggerService() };
-
-            basvuruManager.BasvuruYap(new EsnafKredisiManaager(),loggers); //loggers yerine orada da newlyebilirim ama temiz olsun artık .
+            /*hangini istersem parametre olarak onu gönderebilirim, ben hepsin i çalıştırıyım
+            basvuruManager.BasvuruYap(ihtiyacKrediManager2);
+            basvuruManager.BasvuruYap(tasitKrediManager2);
+            basvuruManager.BasvuruYap(konutKrediManager2);
+            */
 
 
 
 
-            //Birden fazla kredi hakkında bilgi almak istiyorum.
-            List<IKrediManager>krediler=new List<IKrediManager>() {ihtiyacKrediManager,tasitKrediManager};
-            // basvuruManager.KrediOnBilgilendirmesiYap(krediler); //krediler listesini parametre olarak gönderdim.
+
+            //---------Liste gönderme ---------------------
+            /*
+
+            List<IKrediManager> krediler = new List<IKrediManager>() { ihtiyacKrediManager2, tasitKrediManager2 };
+
+            basvuruManager.KrediOnBilgilendirmesiYap(krediler);
+
+            */
 
 
-            string değişiklik = "erdem";
+
+            //Loglama 
+
+            //böyle yapıp içine yazailbirdik 
+            ILoggerService databaseLoggerService = new DatabaseLoggerService();
+            ILoggerService fileKrediManager = new FileLoggerService();
+
+            //içeride referans oluşturma
+            basvuruManager.BasvuruYap(new IhtiyacKrediManager(), new List<ILoggerService>() { new DatabaseLoggerService(), new FileLoggerService() });
+
+
+
+
+
+
 
 
         }
     }
-} 
+}

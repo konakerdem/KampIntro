@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace OOP2
 {
-     class Musteri
+    class Musteri
     {
+         //ortak olanlar
         public int Id { get; set; }
         public string MusteriNo { get; set; }
-         
+
 
     }
 }

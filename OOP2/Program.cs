@@ -2,54 +2,58 @@
 
 namespace OOP2
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            //Engin Demiroğ
+            //ERDEM KONAK
             GercekMusteri musteri1 = new GercekMusteri();
-            musteri1.Id = 1;
+            musteri1.Id = 11;
             musteri1.MusteriNo = "12345";
-            musteri1.Adi = "Engin";
-            musteri1.Soyadi = "Demiroğ";
-            musteri1.TcNo = "12345678910"; 
+            musteri1.Adi = "Erdem";
+            musteri1.SoyAdi = "Konak";
+            musteri1.TcNo = "11111111111";
 
 
-            //Kodlama.io
+            //KODLAMA.IO
 
-            TuzelMusteri musteri2=new TuzelMusteri();
-            musteri2.Id=2;
-            musteri2.MusteriNo="54321";
+
+            TuzelMusteri musteri2 = new TuzelMusteri();
+            musteri2.Id = 2;
+            musteri2.MusteriNo = "54321";
             musteri2.SirketAdi = "Kodlama.io";
-            musteri2.VergiNo = "12345678910";
-
-            //Gerçek Müşteri - Tüzel Müşteri bunlar benziyo diye aynı nesneyi kullanma
-            //SOLID   L HARFI 
+            musteri2.VergiNo = "1234567890";
 
 
-            //Musteri gerçek musteride de adres oluşturabiliyor tuzelmusteride de adres oluşturabiliyor.
+
+
+            //    Musteri musteri=new Musteri();     !!!! DİKKATTT  bu durumda sadece  kendisindekilere yani ortaklara  erişebiliyo 
+
+
+            //   !!!!!!!!   Musteri classı üzerinden hem Gerçek Müşteri hem de Tüzel Müşteri'nin referansını tutabiliyor.
+
 
             Musteri musteri3 = new GercekMusteri();
             Musteri musteri4 = new TuzelMusteri();
 
+            //  POLYMORPHISZM
 
-
-
-              
             MusteriManager musteriManager = new MusteriManager();
-
-            //Ekle fonksiyonu Musteri referansı istiyordu ama Musteri diğerlerinin de türebiliyor
-            //Bu yüzden türetebildiklerini de kullanabiliyoruz.
-            musteriManager.Ekle(musteri1);  
+            musteriManager.Ekle(musteri1);
             musteriManager.Ekle(musteri2);
-            musteriManager.Ekle(musteri3);
-            musteriManager.Ekle(musteri4);
+            //ekle fonksiyonu musteri nesnesi istiyor . Musteri hem gerçek hemde tüzel referansları tutabildiği için GERÇEK VEYA TÜZEL MMÜŞTERİ de gönderebiliyoruzzz 
 
 
 
 
 
 
+
+
+
+            //SOLID
         }
+
     }
+
 }
